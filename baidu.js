@@ -1,8 +1,8 @@
 $(function(){
-    
+    var num=60;
         $('#name').blur(function(){
             nameReg=/[a-zA-Z0-9][\u4e00-\u9fa5]+/;
-            if(!(this).val()){
+            if(!nameReg.val()){
                 $('#error1').attr('style','display:block')
             }else{
                 $('#error1').html('')
@@ -10,7 +10,7 @@ $(function(){
         })
         $('#tel').blur(function(){
             telReg=/^[1][3,5,7,8][0-9]{9}/;
-            if(!(this).val()){
+            if(!telReg.val()){
                 $('#error2').attr('style','display:block')
             }else{
                 $('#error2').html('')
@@ -23,6 +23,7 @@ $(function(){
                 $('#error4').html('')
             }
         })
+
         $('#getsur').click(function(){
             $('#getsur').attr('disabled',true);
             var tm = setInterval(function(){
